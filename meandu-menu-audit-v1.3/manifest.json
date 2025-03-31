@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Me&U Menu Audit",
+  "version": "1.3",
+  "description": "Audit Me&U menus for best practices",
+  "permissions": ["tabs", "storage", "scripting", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/hamburger.png",
+      "48": "icons/hamburger.png",
+      "128": "icons/hamburger.png"
+    }
+  },
+  "content_scripts": [{
+    "matches": ["https://*.meandu.com/*"],
+    "js": ["content.js"]
+  }],
+  "icons": {
+    "16": "icons/hamburger.png",
+    "48": "icons/hamburger.png",
+    "128": "icons/hamburger.png"
+  }
+}

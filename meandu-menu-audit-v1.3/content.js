@@ -1,0 +1,1 @@
+// Content script with venue-agnostic logic placeholder
